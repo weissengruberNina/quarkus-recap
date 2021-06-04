@@ -1,0 +1,18 @@
+@startuml
+
+class Vehicle {
+  brand: String
+  model: String
+  constructionYear: int
+}
+
+class Register {
+  name: String
+  licenseNo: String
+  vehicle: Vehicle
+  registerDate: LocalDate
+  signOffDate: LocalDate
+}
+
+Register "*" --> "1" Vehicle: registers >
+@enduml

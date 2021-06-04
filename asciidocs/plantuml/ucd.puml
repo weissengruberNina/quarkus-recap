@@ -1,0 +1,10 @@
+@startuml
+left to right direction
+actor owner
+rectangle VehicleRegister {
+  owner -- (register Car)
+  owner -- (sign off car)
+}
+
+
+@enduml
