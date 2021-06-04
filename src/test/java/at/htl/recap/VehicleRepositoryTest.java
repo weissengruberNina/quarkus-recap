@@ -1,5 +1,6 @@
 package at.htl.recap;
 
+import at.htl.recap.control.VehicleRepository;
 import at.htl.recap.entity.Vehicle;
 import io.agroal.api.AgroalDataSource;
 import io.quarkus.test.junit.QuarkusTest;
@@ -34,12 +35,12 @@ class VehicleRepositoryTest {
         Vehicle vehicle = new Vehicle("Opel", "Kapitän", 1972);
         System.out.println(vehicle.toString());
 
-        vehicleRepository.persist(vehicle);
+        vehicle = vehicleRepository.save(vehicle);
         System.out.println(vehicle.toString());
 
-        //vehicle.model = "Commodore";
-        //vehicleRepository.save(vehicle);
-        //System.out.println(vehicle.toString());
+        vehicle.model = "Commodore";
+        vehicleRepository.save(vehicle);
+        System.out.println(vehicle.toString());
 
         Table table = new Table(ds, "V_VEHICLE");
         output(table).toConsole();

@@ -19,7 +19,7 @@ public class Vehicle extends PanacheEntityBase {
             strategy = GenerationType.SEQUENCE,
             generator = "vehicleSeq"
     )
-    Long id;
+    private Long id;
 
     @Column(name = "V_BRAND")
     public String brand;
@@ -37,6 +37,10 @@ public class Vehicle extends PanacheEntityBase {
         this.brand = brand;
         this.model = model;
         this.constructionYear = constructionYear;
+    }
+
+    public Long getId() {
+        return id;
     }
 
     public int age() {

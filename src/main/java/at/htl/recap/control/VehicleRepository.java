@@ -1,4 +1,4 @@
-package at.htl.recap;
+package at.htl.recap.control;
 
 import at.htl.recap.entity.Vehicle;
 import io.quarkus.hibernate.orm.panache.PanacheRepository;
