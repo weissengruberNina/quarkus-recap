@@ -22,13 +22,13 @@ public class Vehicle extends PanacheEntityBase {
     Long id;
 
     @Column(name = "V_BRAND")
-    String brand;
+    public String brand;
 
     @Column(name = "V_MODEL")
-    String model;
+    public String model;
 
     @Column(name = "V_CONSTRUCTION_YEAR")
-    int constructionYear;
+    public int constructionYear;
 
     public Vehicle() {
     }
@@ -45,6 +45,6 @@ public class Vehicle extends PanacheEntityBase {
 
     @Override
     public String toString() {
-        return String.format("%s %s", brand, model);
+        return String.format("%d: %s %s", id, brand, model);
     }
 }
